@@ -6,18 +6,18 @@ namespace DecouplingClasses.Tests
     {
         public TestableConsole()
         {
-            LastWrittenLine = new List<string>();
+            WrittenLines = new List<string>();
         }
 
-        public List<string> LastWrittenLine { get; set; }
+        public List<string> WrittenLines { get; set; }
         public void Write(string value)
         {
-            LastWrittenLine.Add(value);
+            WrittenLines.Add(value);
         }
 
         public void WriteLine(string value)
         {
-            LastWrittenLine.Add(value);
+            WrittenLines.Add(value);
         }
 
         public string LineToRead { get; set; }

@@ -13,7 +13,7 @@ namespace DecouplingClasses.Tests
 
             myTeam.PrintTeamInfo();
 
-            Assert.AreEqual<string>("Hockey - Bruins", testConsole.LastWrittenLine[0]);
+            Assert.AreEqual<string>("Hockey - Bruins", testConsole.WrittenLines[0]);
         }
 
         [TestMethod]
@@ -27,7 +27,7 @@ namespace DecouplingClasses.Tests
             myTeam.UpdateTeam();
 
             Assert.AreEqual<string>("Rangers", myTeam.TeamName);
-            Assert.AreEqual<string>("Enter new team name --> ", testConsole.LastWrittenLine[0]);
+            Assert.AreEqual<string>("Enter new team name --> ", testConsole.WrittenLines[0]);
         }
     }
 }
